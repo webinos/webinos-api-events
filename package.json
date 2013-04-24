@@ -1,4 +1,4 @@
-{ "name": "events"
+{ "name": "webinos-api-events"
 , "publishConfig": { "tag": "alpha" }
 , "description": "Events API"
 , "keywords": [ "webinos", "events", "API"]
