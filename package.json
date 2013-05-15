@@ -7,7 +7,7 @@
 , "author": "Andre Paul <andre.paul@fokus.fraunhofer.de>"
 , "repository":
   { "type": "git"
-  , "url": "http://dev.webinos.org/git/wp4.git"
+  , "url": "https://github.com/webinos/webinos-api-events"
   }
 , "bugs":
   { "email": "webinos-wp4-ml@fokus.fraunhofer.de"
@@ -16,10 +16,7 @@
 , "directories": { "lib": "./lib"
                  }
 , "main": "./lib/events.js"
-, "dependencies":
-  {
+, "devDependencies":
+  { "webinos-jsonrpc2": "*"
   }
-, "bundleDependencies":
-  [
-  ]
 }
