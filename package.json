@@ -2,12 +2,12 @@
 , "publishConfig": { "tag": "alpha" }
 , "description": "Events API"
 , "keywords": [ "webinos", "events", "API"]
-, "version": "0.0.1"
+, "version": "0.8.0"
 , "homepage": "http://webinos.org/"
 , "author": "Andre Paul <andre.paul@fokus.fraunhofer.de>"
 , "repository":
   { "type": "git"
-  , "url": "https://github.com/webinos/webinos-api-events"
+  , "url": "https://github.com/webinos/webinos-api-events.git"
   }
 , "bugs":
   { "email": "webinos-wp4-ml@fokus.fraunhofer.de"
