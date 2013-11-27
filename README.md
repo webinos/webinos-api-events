@@ -2,7 +2,6 @@
 
 **Service Type**: http://webinos.org/api/events
 
-The main concept of events API is to !TODO!
 The Webinos Event Handling API provides means to exchange data in terms of events among addressable entities (e.g., applications, services), either locally or remotely.
 
 ## Installation ##
