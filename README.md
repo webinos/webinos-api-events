@@ -63,40 +63,34 @@ Once you have a reference to an instance of a service you can use the following 
 ###createWebinosEvent(type, addressing, payload, inResponseTo, withTimeStamp, expiryTimeStamp, addressingSensitive)
 
 Creates a webinos Event.
-         @param type Event type identifier.
-         @param addressing References to the sending entity on the behalf of which the application wants to create the          event and to the event recipients.
-         @param payload Event type-specific data or null (undefined is considered as equivalent to null).
-         @param inResponseTo Event that this event is a response to (undefined is considered as equivalent to null).
-         @param withTimeStamp Whether to set the generation timestamp (undefined is considered as equivalent to false).
-         @param expiryTimeStamp Moment in time past which the event is no more valid or meaningful (undefined is      
-         considered as equivalent to null).
-         @param addressingSensitive Whether the addressing information is part of the informative content of the event 
+- type: Event type identifier.
+- addressing References: to the sending entity on the behalf of which the application wants to create the          event and to the event recipients.
+- payload: Event type-specific data or null (undefined is considered as equivalent to null).
+- inResponseTo: Event that this event is a response to (undefined is considered as equivalent to null).
+- withTimeStamp: Whether to set the generation timestamp (undefined is considered as equivalent to false).
+- expiryTimeStamp: Moment in time past which the event is no more valid or meaningful (undefined is considered as equivalent to null).
+- addressingSensitive: Whether the addressing information is part of the informative content of the event 
          (undefined is considered as equivalent to false).
 
 ###addWebinosEventListener(listener, type, source, destination)
 
 Registers an event listener.
-         @param listener The event listener.
-         @param type Specific event type or null for any type (undefined is considered as null).
-         @param source Specific event source or null for any source (undefined is considered as null).
-         @param destination Specific event recipient (whether primary or not) or null for any destination (undefined is          considered as null).
-         @returns Listener identifier.
+- listener: The event listener.
+- type: Specific event type or null for any type (undefined is considered as null).
+- source: Specific event source or null for any source (undefined is considered as null).
+- destination: Specific event recipient (whether primary or not) or null for any destination (undefined is          considered as null).
 
 ###removeWebinosEventListener(listenerId)
 
 Unregisters an event listener.
-         @param listenerId Listener identifier as returned by addWebinosEventListener().
+- listenerId: Listener identifier as returned by addWebinosEventListener().
 
 ###dispatchWebinosEvent(callbacks, referenceTimeout, sync)
 
 Sends an event.
-         @param callbacks Set of callbacks to monitor sending status (null and undefined are considered as equivalent 
-         to a WebinosEventCallbacks object with all attributes set to null).
-         @param referenceTimeout Moment in time until which the Webinos runtime SHALL ensure that the WebinosEvent 
-         object being sent is not garbage collected for the purpose of receiving events in response to the event being 
-         sent (null, undefined and values up to the current date/time mean that no special action is taken by the    
-         runtime in this regard).
-         @param sync If false or undefined, the function is non-blocking, otherwise if true it will block.
+- callbacks: Set of callbacks to monitor sending status (null and undefined are considered as equivalent to a WebinosEventCallbacks object with all attributes set to null).
+- referenceTimeout: Moment in time until which the Webinos runtime SHALL ensure that the WebinosEvent object being sent is not garbage collected for the purpose of receiving events in response to the event being sent (null, undefined and values up to the current date/time mean that no special action is taken by the runtime in this regard).
+- sync: If false or undefined, the function is non-blocking, otherwise if true it will block.
 
 
 ## Links ##
