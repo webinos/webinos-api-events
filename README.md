@@ -73,7 +73,7 @@ Creates a webinos Event.
          @param addressingSensitive Whether the addressing information is part of the informative content of the event 
          (undefined is considered as equivalent to false).
 
-###addWebinosEventListener = function(listener, type, source, destination)
+###addWebinosEventListener(listener, type, source, destination)
 
 Registers an event listener.
          @param listener The event listener.
@@ -82,12 +82,12 @@ Registers an event listener.
          @param destination Specific event recipient (whether primary or not) or null for any destination (undefined is          considered as null).
          @returns Listener identifier.
 
-###removeWebinosEventListener = function(listenerId)
+###removeWebinosEventListener(listenerId)
 
 Unregisters an event listener.
          @param listenerId Listener identifier as returned by addWebinosEventListener().
 
-###dispatchWebinosEvent = function(callbacks, referenceTimeout, sync)
+###dispatchWebinosEvent(callbacks, referenceTimeout, sync)
 
 Sends an event.
          @param callbacks Set of callbacks to monitor sending status (null and undefined are considered as equivalent 
