@@ -89,7 +89,7 @@ Unregisters an event listener.
 
 ###dispatchWebinosEvent = function(callbacks, referenceTimeout, sync)
 
-* Sends an event.
+Sends an event.
          @param callbacks Set of callbacks to monitor sending status (null and undefined are considered as equivalent 
          to a WebinosEventCallbacks object with all attributes set to null).
          @param referenceTimeout Moment in time until which the Webinos runtime SHALL ensure that the WebinosEvent 
