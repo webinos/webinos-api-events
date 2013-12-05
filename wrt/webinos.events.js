@@ -31,8 +31,7 @@
 	 * @param obj Object containing displayName, api, etc.
 	 */
 	EventsModule = function(obj) {
-		this.base = WebinosService;
-		this.base(obj);
+		WebinosService.call(this, obj);
 		eventService = this;
 		this.idCount = 0;
 		//this.myAppID = "TestApp" + webinos.messageHandler.getOwnSessionId();
@@ -42,7 +41,12 @@
 		console.log("MyAppID: " + this.myAppID);
 	};
 
-	EventsModule.prototype = new WebinosService;
+	// Inherit all functions from WebinosService
+	EventsModule.prototype = Object.create(WebinosService.prototype);	
+	// The following allows the 'instanceof' to work properly
+	EventsModule.prototype.constructor = EventsModule;
+	// Register to the service discovery
+	_webinos.registerServiceConstructor("http://webinos.org/api/events", EventsModule);
 
 	/**
 	 * To bind the service.
